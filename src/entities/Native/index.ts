@@ -1,2 +1,2 @@
 // Native exports
-export { SmartBCH } from './SmartBCH'
+export { CoreDAO } from './CoreDAO'

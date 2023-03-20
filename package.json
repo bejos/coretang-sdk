@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/tangoswap-cash/tangoswap-sdk",
+  "repository": "https://github.com/bejos/coretango-sdk",
   "keywords": [
     "tangoswap",
     "bitcoin-cash",

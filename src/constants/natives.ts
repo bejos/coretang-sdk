@@ -1,8 +1,8 @@
-import { SmartBCH } from '../entities/Native'
+import { CoreDAO } from '../entities/Native'
 
 import { ChainId } from '../enums'
 
 export const NATIVE = {
-  [ChainId.SMARTBCH]: SmartBCH.onChain(ChainId.SMARTBCH),
-  [ChainId.SMARTBCH_AMBER]: SmartBCH.onChain(ChainId.SMARTBCH_AMBER)
+  [ChainId.COREDAO]: CoreDAO.onChain(ChainId.COREDAO),
+  [ChainId.COREDAO_AMBER]: CoreDAO.onChain(ChainId.COREDAO_AMBER)
 }

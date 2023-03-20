@@ -1,16 +1,16 @@
-import { SmartBCH } from './SmartBCH'
+import { CoreDAO } from './CoreDAO'
 
-describe('SmartBCH', () => {
+describe('CoreDAO', () => {
   it('static constructor uses cache', () => {
-    expect(SmartBCH.onChain(10000) === SmartBCH.onChain(10000)).toEqual(true)
+    expect(CoreDAO.onChain(1116) === CoreDAO.onChain(1116)).toEqual(true)
   })
   it('caches once per chain ID', () => {
-    expect(SmartBCH.onChain(10000) !== SmartBCH.onChain(10001)).toEqual(true)
+    expect(CoreDAO.onChain(1116) !== CoreDAO.onChain(1115)).toEqual(true)
   })
   it('#equals returns false for diff chains', () => {
-    expect(SmartBCH.onChain(10000).equals(SmartBCH.onChain(10001))).toEqual(false)
+    expect(CoreDAO.onChain(1116).equals(CoreDAO.onChain(1115))).toEqual(false)
   })
   it('#equals returns true for same chains', () => {
-    expect(SmartBCH.onChain(10000).equals(SmartBCH.onChain(10000))).toEqual(true)
+    expect(CoreDAO.onChain(1116).equals(CoreDAO.onChain(1116))).toEqual(true)
   })
 })

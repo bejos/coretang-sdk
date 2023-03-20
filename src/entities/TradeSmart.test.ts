@@ -1,15 +1,15 @@
-import { CurrencyAmount, SmartBCH, Percent, Price, Token, TradeSmart } from '.'
+import { CurrencyAmount, CoreDAO, Percent, Price, Token, TradeSmart } from '.'
 
 import JSBI from 'jsbi'
 
 describe('TradeSmart', () => {
-  const ETHER = SmartBCH.onChain(10000)
+  const ETHER = CoreDAO.onChain(10000)
   const token0 = new Token(10000, '0x0000000000000000000000000000000000000001', 18, 't0')
   const token2 = new Token(10000, '0x0000000000000000000000000000000000000003', 18, 't2')
 
   it('can be constructed with ETHER as input', () => {
     const trade = new TradeSmart(
-      CurrencyAmount.fromRawAmount(SmartBCH.onChain(10000), JSBI.BigInt(100)),
+      CurrencyAmount.fromRawAmount(CoreDAO.onChain(10000), JSBI.BigInt(100)),
       CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(100)),
       [],
       1
@@ -21,7 +21,7 @@ describe('TradeSmart', () => {
   it('can be constructed with ETHER as output for exact input', () => {
     const trade = new TradeSmart(
       CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(100)),
-      CurrencyAmount.fromRawAmount(SmartBCH.onChain(10000), JSBI.BigInt(100)),
+      CurrencyAmount.fromRawAmount(CoreDAO.onChain(10000), JSBI.BigInt(100)),
       [],
       1
     )

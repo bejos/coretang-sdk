@@ -38,8 +38,8 @@ import { computeConstantProductPoolAddress } from '../functions/computeConstantP
 
 describe('computePoolAddress', () => {
   it('should correctly compute the pool address 2', () => {
-    const tokenA = new Token(ChainId.SMARTBCH, FLEXUSD_ADDRESS[ChainId.SMARTBCH], 18, 'flexUSD', 'FlexUSD')
-    const tokenB = new Token(ChainId.SMARTBCH, WBCH_ADDRESS[ChainId.SMARTBCH], 18, 'BCH', 'Bitcoin Cash')
+    const tokenA = new Token(ChainId.COREDAO, FLEXUSD_ADDRESS[ChainId.COREDAO], 18, 'flexUSD', 'FlexUSD')
+    const tokenB = new Token(ChainId.COREDAO, WBCH_ADDRESS[ChainId.COREDAO], 18, 'BCH', 'Bitcoin Cash')
 
     expect(tokenA.address).toEqual('0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72')
     expect(tokenB.address).toEqual('0x0000000000000000000000000000000000002711')
